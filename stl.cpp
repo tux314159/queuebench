@@ -3,11 +3,11 @@ using namespace std;
 
 #ifdef _DEBUG
 #include <stdio.h>
-#define DBG(x)
+#define DBG(x) printf("%d\n", x)
 #define SZ 16
 #define N 1
 #else
-#define DBG(x) (void)x
+#define DBG(x)
 #define SZ 4096
 #define N 10000
 #endif

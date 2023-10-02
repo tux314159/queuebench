@@ -1,4 +1,6 @@
-BINS=build/circular build/stacks build/circular_pow2 build/stl
+BINS=build/circular build/circular_pow2 build/stacks build/stacks_nocpy build/stl
+
+all : $(BINS)
 
 bench : $(BINS)
 	for bin in $^; do hyperfine -N --warmup=1 $$bin; done
