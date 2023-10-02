@@ -16,12 +16,12 @@ struct Queue mk_queue(int size)
 	return q;
 }
 
-void queue_push(struct Queue *q, size_t val)
+void queue_push(struct Queue *q, int val)
 {
 	*(q->inp++) = val;
 }
 
-size_t queue_pop(struct Queue *q)
+int queue_pop(struct Queue *q)
 {
 	if (q->outp == q->out) {
 		q->outp = q->base;
