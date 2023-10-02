@@ -3,7 +3,7 @@ BINS=build/circular build/circular_pow2 build/stacks build/stacks_nocpy build/st
 all : $(BINS)
 
 bench : $(BINS)
-	for bin in $^; do hyperfine -N --warmup=5 $$bin; done
+	for bin in $^; do hyperfine -N --warmup=1 $$bin; done
 
 build/% : %.c skel.h
 	mkdir -p build

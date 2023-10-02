@@ -1,7 +1,7 @@
 #include "skel.h"
 
 struct Queue {
-	volatile char *in, *out, *inp, *outp;
+	volatile int *in, *out, *inp, *outp;
 };
 
 struct Queue mk_queue(int size)
@@ -14,12 +14,12 @@ struct Queue mk_queue(int size)
 	return q;
 }
 
-void queue_push(struct Queue *q, char val)
+void queue_push(struct Queue *q, size_t val)
 {
 	*(q->inp++) = val;
 }
 
-char queue_pop(struct Queue *q)
+size_t queue_pop(struct Queue *q)
 {
 	if (q->outp == q->out) {
 		while (q->inp != q->in) {

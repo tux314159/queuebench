@@ -14,7 +14,7 @@ using namespace std;
 
 int main(void)
 {
-	queue<char> q;
+	queue<int> q;
 	for (int i = 0; i < N; i++) {
 		for (int i = 0; i < SZ/2; i++) {
 			q.push(i);
