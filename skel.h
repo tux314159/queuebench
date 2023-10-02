@@ -16,25 +16,25 @@
 	struct Queue q = mk_queue(SZ);\
 	for (int i = 0; i < N; i++) {\
 		for (int i = 0; i < SZ/2; i++) {\
-			queue_push(&q, i);\
+			queue_push(&q, i%128);\
 		}\
 		for (int i = 0; i < SZ/4; i++) {\
 			DBG(queue_pop(&q));\
 		}\
 		for (int i = 0; i < SZ/2; i++) {\
-			queue_push(&q, i);\
+			queue_push(&q, i%128);\
 		}\
 		for (int i = 0; i < SZ/4; i++) {\
 			DBG(queue_pop(&q));\
 		}\
 		for (int i = 0; i < SZ/2; i++) {\
-			queue_push(&q, i);\
+			queue_push(&q, i%128);\
 		}\
 		for (int i = 0; i < SZ/4; i++) {\
 			DBG(queue_pop(&q));\
 		}\
 		for (int i = 0; i < SZ/4; i++) {\
-			queue_push(&q, i);\
+			queue_push(&q, i%128);\
 		}\
 		for (int i = 0; i < SZ; i++) {\
 			DBG(queue_pop(&q));\
