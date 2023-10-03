@@ -1,4 +1,4 @@
-BINS=build/circular build/circular_pow2 build/stacks build/stacks_nocpy build/stl
+BINS=build/circular build/circular_pow2 build/circular_if build/stacks build/stacks_nocpy build/stl
 
 all : $(BINS)
 
