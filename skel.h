@@ -7,7 +7,7 @@
 #define N 1
 #else
 #define DBG(x) x
-#define SZ 65536
+#define SZ (1<<16)
 #define N 1000
 #endif
 

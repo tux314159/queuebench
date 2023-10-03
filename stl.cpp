@@ -1,5 +1,6 @@
 #include <queue>
 using namespace std;
+#include "skel.h"
 
 #ifdef _DEBUG
 #include <stdio.h>
@@ -8,8 +9,6 @@ using namespace std;
 #define N 1
 #else
 #define DBG(x)
-#define SZ 4096
-#define N 10000
 #endif
 
 int main(void)

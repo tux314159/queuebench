@@ -7,8 +7,8 @@ bench : $(BINS)
 
 build/% : %.c skel.h
 	mkdir -p build
-	gcc -O3 -o $@ -D_$(DEBUG) $^
+	gcc -O3 -o $@ -D_$(DEBUG) $<
 
 build/% : %.cpp
 	mkdir -p build
-	g++ -O3 -o $@ -D_$(DEBUG) $^
+	g++ -O3 -o $@ -D_$(DEBUG) $<
