@@ -2,7 +2,7 @@
 
 struct Queue {
 	int sz;
-	volatile int *q;
+	int *q;
 	int h, t;
 };
 

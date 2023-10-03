@@ -1,14 +1,14 @@
 #include "skel.h"
 
 struct Queue {
-	volatile int *in, *out, *inp, *outp;
+	int *in, *out, *inp, *outp;
 };
 
 struct Queue mk_queue(int size)
 {
 	struct Queue q;
 	q.in = malloc(2 * size * sizeof(*q.in));
-	q.out = q.in + size * sizeof(*q.in);
+	q.out = q.in + size;
 	q.inp = q.in;
 	q.outp = q.out;
 	return q;

@@ -7,8 +7,8 @@
 #define N 1
 #else
 #define DBG(x) x
-#define SZ 4096
-#define N 10000
+#define SZ 65536
+#define N 1000
 #endif
 
 #define MAIN int main(void)\
@@ -39,5 +39,12 @@
 		for (int i = 0; i < SZ; i++) {\
 			DBG(queue_pop(&q));\
 		}\
+	}\
+	volatile int x;\
+	for (int i = 0; i < SZ; i++) {\
+		queue_push(&q, i);\
+	}\
+	for (int i = 0; i < SZ; i++) {\
+		x ^= queue_pop(&q);\
 	}\
 }
