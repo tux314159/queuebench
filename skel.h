@@ -7,8 +7,8 @@
 #define N 1
 #else
 #define DBG(x) x
-#define SZ (1<<16)
-#define N 1000
+#define SZ (1<<20)
+#define N 100
 #endif
 
 #define MAIN int main(void)\
