@@ -11,7 +11,8 @@
 #define N 100
 #endif
 
-#define MAIN int main(void)\
+#define MAIN int x = 0;\
+int main(void)\
 {\
 	struct Queue q = mk_queue(SZ);\
 	for (int i = 0; i < N; i++) {\
@@ -40,7 +41,6 @@
 			DBG(queue_pop(&q));\
 		}\
 	}\
-	volatile int x;\
 	for (int i = 0; i < SZ; i++) {\
 		queue_push(&q, i);\
 	}\

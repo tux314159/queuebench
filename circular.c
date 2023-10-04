@@ -14,13 +14,19 @@ struct Queue mk_queue(int sz)
 void queue_push(struct Queue *q, int x)
 {
 	q->q[q->h] = x;
-	q->h = (q->h + 1) % q->sz;
+	q->h++;
+	if (q->h == q->sz) {
+		q->h = 0;
+	}
 }
 
 int queue_pop(struct Queue *q)
 {
 	int x = q->q[q->t];
-	q->t = (q->t + 1) % q->sz;
+	q->t++;
+	if (q->t == q->sz) {
+		q->t = 0;
+	}
 	return x;
 }
 
