@@ -15,18 +15,16 @@ void queue_push(struct Queue *q, int x)
 {
 	q->q[q->h] = x;
 	q->h++;
-	if (q->h == q->sz) {
+	if (q->h == q->sz)
 		q->h = 0;
-	}
 }
 
 int queue_pop(struct Queue *q)
 {
 	int x = q->q[q->t];
 	q->t++;
-	if (q->t == q->sz) {
+	if (q->t == q->sz)
 		q->t = 0;
-	}
 	return x;
 }
 

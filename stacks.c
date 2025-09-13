@@ -21,11 +21,9 @@ void queue_push(struct Queue *q, int val)
 
 int queue_pop(struct Queue *q)
 {
-	if (q->outp == q->out) {
-		while (q->inp != q->in) {
+	if (q->outp == q->out)
+		while (q->inp != q->in)
 			*(q->outp++) = *(--q->inp);
-		}
-	}
 	return *(--q->outp);
 }
 
