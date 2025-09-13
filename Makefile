@@ -1,14 +1,13 @@
-BINS=build/circular build/stacks build/stacks_nocpy build/stl
+CC ?= gcc
+CFLAGS ?= -O3
+
+BINS = build/circular build/stacks build/stacks_nocpy
 
 all : $(BINS)
 
 bench : $(BINS)
-	hyperfine -N --warmup=1 $(BINS)
+	hyperfine -N --warmup=8 $(BINS)
 
 build/% : %.c skel.h
 	mkdir -p build
-	gcc -O3 -o $@ -D_$(DEBUG) $<
-
-build/% : %.cpp
-	mkdir -p build
-	g++ -O3 -o $@ -D_$(DEBUG) $<
+	$(CC) $(CFLAGS) -o $@ -D_$(DEBUG) $<

@@ -1,1 +1,3 @@
-terrible code idk benchmark quality lol
+Three different implementations of a simple static queue. Code isn't great, oops.
+compile with `DEBUG=DEBUG make` to print items popped; you can then verify all
+three implementations have the same output.
